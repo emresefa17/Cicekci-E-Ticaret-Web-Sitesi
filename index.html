@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çiçek Bahçesi - Online Çiçek Satış</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Bölümü -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Çiçek Bahçesi</h1>
+            </div>
+            <div class="menu">
+                <a href="#anasayfa">Anasayfa</a>
+                <a href="#urunler">Ürünler</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#yorumlar">Yorumlar</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+            <button class="sepet-btn" id="sepetButon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="sepet-sayi">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sepet Modal -->
+    <div class="sepet-modal" id="sepetModal">
+        <div class="sepet-modal-content">
+            <div class="sepet-header">
+                <h2><i class="fas fa-shopping-cart"></i> Alışveriş Sepetim</h2>
+                <button class="kapat-btn">&times;</button>
+            </div>
+            <div class="sepet-urunler">
+                <!-- Sepet ürünleri buraya dinamik olarak eklenecek -->
+            </div>
+            <div class="sepet-toplam">
+                <h3>Toplam: <span class="toplam-fiyat">₺0.00</span></h3>
+                <button class="btn checkout-btn">Ödemeye Geç</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Bölümü -->
+    <section class="hero" id="anasayfa">
+        <div class="hero-content" data-aos="fade-up">
+            <h2>Sevdiklerinize En Güzel Çiçekler</h2>
+            <p>Özel günleriniz için birbirinden güzel çiçek seçenekleri</p>
+            <a href="#urunler" class="btn">Hemen Keşfet</a>
+        </div>
+    </section>
+
+    <!-- Ürünler Bölümü -->
+    <section class="urunler" id="urunler">
+        <h2 class="baslik">Popüler Ürünlerimiz</h2>
+        <div class="kategori-butonlar">
+            <button class="kategori-btn active" data-kategori="hepsi">Tümü</button>
+            <button class="kategori-btn" data-kategori="buketler">Buketler</button>
+            <button class="kategori-btn" data-kategori="aranjman">Aranjmanlar</button>
+            <button class="kategori-btn" data-kategori="saksı">Saksı Çiçekleri</button>
+            <button class="kategori-btn" data-kategori="orkideler">Orkideler</button>
+        </div>
+        <div class="urun-container">
+            <div class="urun-karti" data-aos="fade-up" data-kategori="buketler">
+                <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94" alt="Kırmızı Güller">
+                <h3>Kırmızı Güller</h3>
+                <p>Özel seçilmiş taze kırmızı güller</p>
+                <span class="fiyat">₺199.99</span>
+                <button class="sepete-ekle">Sepete Ekle</button>
+            </div>
+            <div class="urun-karti" data-aos="fade-up" data-aos-delay="100" data-kategori="orkideler">
+                <img src="https://www.cicekfilosu.com/Images/ShowImages/product-large/44014468-323b-4947-98f6-9fc1e88d32a7.jpg" alt="Orkide">
+                <h3>Beyaz Orkide</h3>
+                <p>Zarif ve uzun ömürlü orkide</p>
+                <span class="fiyat">₺299.99</span>
+                <button class="sepete-ekle">Sepete Ekle</button>
+            </div>
+            <div class="urun-karti" data-aos="fade-up" data-aos-delay="200" data-kategori="buketler">
+                <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364" alt="Papatya Buketi">
+                <h3>Papatya Buketi</h3>
+                <p>Renkli ve canlı papatyalar</p>
+                <span class="fiyat">₺149.99</span>
+                <button class="sepete-ekle">Sepete Ekle</button>
+            </div>
+            <div class="urun-karti" data-aos="fade-up" data-aos-delay="300" data-kategori="buketler">
+                <img src="https://images.unsplash.com/photo-1548386135-b47c7d440022" alt="Pembe Güller">
+                <h3>Pembe Güller</h3>
+                <p>Romantik pembe güller</p>
+                <span class="fiyat">₺249.99</span>
+                <button class="sepete-ekle">Sepete Ekle</button>
+            </div>
+            <div class="urun-karti" data-aos="fade-up" data-aos-delay="400" data-kategori="orkideler">
+                <img src="https://images.unsplash.com/photo-1566938064504-a379175168b3" alt="Mor Orkide">
+                <h3>Mor Orkide</h3>
+                <p>Egzotik mor orkide</p>
+                <span class="fiyat">₺349.99</span>
+                <button class="sepete-ekle">Sepete Ekle</button>
+            </div>
+            <div class="urun-karti" data-aos="fade-up" data-aos-delay="500" data-kategori="buketler">
+                <img src="https://images.unsplash.com/photo-1591886960571-74d43a9d4166" alt="Karışık Buket">
+                <h3>Karışık Buket</h3>
+                <p>Mevsimin en güzel çiçekleri</p>
+                <span class="fiyat">₺279.99</span>
+                <button class="sepete-ekle">Sepete Ekle</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda Bölümü -->
+    <section class="hakkimizda" id="hakkimizda">
+        <div class="hakkimizda-content" data-aos="fade-right">
+            <h2>Hakkımızda</h2>
+            <p>10 yılı aşkın süredir, en taze ve kaliteli çiçekleri sizlere ulaştırıyoruz. Uzman ekibimiz ve geniş ürün yelpazemizle her özel anınızda yanınızdayız.</p>
+        </div>
+    </section>
+
+    <!-- Yorumlar Bölümü -->
+    <section class="yorumlar" id="yorumlar">
+        <h2 class="baslik">Müşteri Yorumları</h2>
+        <div class="yorum-container">
+            <div class="mevcut-yorumlar">
+                <!-- Örnek yorumlar -->
+                <div class="yorum-karti" data-aos="fade-up">
+                    <div class="yorum-baslik">
+                        <h3>Ayşe Yılmaz</h3>
+                        <div class="yildizlar">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="yorum-metni">Çiçekler çok taze ve güzeldi. Teslimat da çok hızlıydı. Teşekkürler!</p>
+                </div>
+            </div>
+
+            <div class="yorum-form" data-aos="fade-up">
+                <h3>Yorum Yapın</h3>
+                <form id="yorumForm">
+                    <div class="form-grup">
+                        <label for="isim">İsminiz</label>
+                        <input type="text" id="isim" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="yorum">Yorumunuz</label>
+                        <textarea id="yorum" required></textarea>
+                    </div>
+                    <div class="form-grup">
+                        <label>Puanınız</label>
+                        <div class="yildiz-secici">
+                            <i class="far fa-star" data-puan="1"></i>
+                            <i class="far fa-star" data-puan="2"></i>
+                            <i class="far fa-star" data-puan="3"></i>
+                            <i class="far fa-star" data-puan="4"></i>
+                            <i class="far fa-star" data-puan="5"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="yorum-gonder-btn">Yorum Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Bölümü -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Çiçek Bahçesi</h3>
+                <p>Her Gün 09:00 - 21:00 Açık</p>
+                <p>Tel: +90 555 123 4567</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Çiçek Bahçesi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
